@@ -1,0 +1,101 @@
+{
+  "info": {
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "name": "Task Distributer Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Agents",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <your_token_here>",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://task-distributer-backend.onrender.com/api/agents",
+          "protocol": "https",
+          "host": [
+            "task-distributer-backend",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "agents"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Agent",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <your_token_here>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Agent Name\",\n  \"email\": \"agent@example.com\",\n  \"mobile\": \"+1234567890\",\n  \"password\": \"password123\"\n}"
+        },
+        "url": {
+          "raw": "https://task-distributer-backend.onrender.com/api/agents",
+          "protocol": "https",
+          "host": [
+            "task-distributer-backend",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "agents"
+          ]
+        }
+      }
+    },
+    {
+      "name": "User Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\"\n}"
+        },
+        "url": {
+          "raw": "https://task-distributer-backend.onrender.com/api/auth/login",
+          "protocol": "https",
+          "host": [
+            "task-distributer-backend",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      }
+    }
+  ]
+}
