@@ -1,3 +1,0 @@
-echo "* text=auto eol=lf" > .gitattributes
-echo "backend/*.json text eol=lf" >> .gitattributes
-echo "frontend/*.json text eol=lf" >> .gitattributes
