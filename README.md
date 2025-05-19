@@ -97,3 +97,27 @@ npm run preview
 - The `ADMIN_SECRET` is used for admin-level operations; keep it secure.
 - CORS is configured to allow requests from the frontend URL specified in `FRONTEND_URL`.
 - The backend API endpoints are prefixed with `/api` (e.g., `/api/auth`, `/api/agents`, `/api/lists`).
+
+---
+
+## Project Structure
+
+- backend/
+  - package.json, package-lock.json
+  - server.js
+  - config/ (e.g., db.js)
+  - middleware/ (e.g., auth.js, authMiddleware.js)
+  - models/ (e.g., Agent.js, List.js, ListGroup.js, User.js)
+  - routes/ (e.g., agent.js, auth.js, lists.js)
+  - uploads/
+
+- frontend/
+  - package.json, package-lock.json
+  - vite.config.js
+  - public/
+  - src/
+    - components/ (e.g., AddAgent.jsx, Dashboard.jsx, Home.jsx, Login.jsx, Register.jsx, UploadList.jsx)
+    - assets/
+    - App.jsx, main.jsx, index.css, App.css
+
+- README.md (root and frontend)
