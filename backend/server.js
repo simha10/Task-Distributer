@@ -21,7 +21,7 @@ connectDB();
 const app = express();
 app.use(cors({
   origin: [
-        "https://skillspark-x366.onrender.com", // Correct frontend URL
+        "https://task-distributer.onrender.com", // Correct frontend URL
         "http://localhost:5173", // Local dev
         "http://localhost:3000", // For serve -s dist
         "http://localhost:4173" // For npm run preview
