@@ -18,7 +18,7 @@ Create a `.env` file in the `backend` directory with the following variables:
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 ADMIN_SECRET=your_admin_secret_key
-FRONTEND_URL=http://localhost:5173  # Optional, URL of the frontend app
+FRONTEND_URL=https://task-distributer.onrender.com  # URL of the deployed frontend app
 PORT=5000  # Optional, port for backend server (default is 5000)
 ```
 
@@ -45,6 +45,15 @@ The server will start on the port specified in the `.env` file or default to por
 
 ### Prerequisites
 - Node.js (v16 or higher recommended)
+
+### Environment Variables
+Create a `.env` file in the `frontend` directory with the following variable:
+
+```
+VITE_API_URL=https://task-distributer-backend.onrender.com
+```
+
+This configures the frontend to use the deployed backend API.
 
 ### Install Dependencies
 Navigate to the `frontend` directory and install dependencies:
@@ -95,7 +104,7 @@ npm run preview
 - Ensure MongoDB is running and accessible via the connection string in `MONGO_URI`.
 - The backend uses JWT for authentication; keep `JWT_SECRET` secure.
 - The `ADMIN_SECRET` is used for admin-level operations; keep it secure.
-- CORS is configured to allow requests from the frontend URL specified in `FRONTEND_URL`.
+- CORS is configured in the backend to allow requests from the deployed frontend URL `https://task-distributer.onrender.com` and local development URLs.
 - The backend API endpoints are prefixed with `/api` (e.g., `/api/auth`, `/api/agents`, `/api/lists`).
 
 ---
